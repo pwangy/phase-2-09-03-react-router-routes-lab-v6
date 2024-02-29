@@ -1,16 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 function Movie() {
-  return (
-    <>
-      <header>
-        {/* What component should go here? */}
-      </header>
-      <main>
-        {/* Movie info here! */}
-      </main>
-    </>
-  );
-};
+	return (
+		<>
+			<header>{/* What component should go here? */}</header>
+			<main>{/* Movie info here! */}</main>
+		</>
+	)
+}
 
-export default Movie;
+export default Movie
