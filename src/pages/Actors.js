@@ -1,12 +1,27 @@
 import { useEffect, useState } from 'react'
+import { Wrapper } from '../components/Wrapper'
 
-function Actors() {
+const Actors = () => {
+  const [actors, setActors] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:4000/actors')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Could not connect to server!')
+      }
+      return res.json()
+    })
+    .then(actorData => setActors(actorData))
+    .catch(err => console.error(err))
+  }, [])
+
+  const renderActors = actors.map(a => <Wrapper key={a.id} {...a} />)
+
 	return (
-		<>
-			<header>{/* What component should go here? */}</header>
-			<main>{/* Actor info here! */}</main>
-		</>
-	)
-}
+    <main>
+      {renderActors}
+    </main>
+)}
 
 export default Actors

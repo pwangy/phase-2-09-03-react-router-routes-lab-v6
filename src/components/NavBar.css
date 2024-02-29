@@ -1,17 +1,25 @@
 .navbar > a{
-    display: inline-block;
-    box-sizing: border-box;
-    width: 70px;
-    padding: 5px;
+    padding: 6px 16px;
     margin: 0 6px 6px;
-    background: lightblue;
+    font-size: x-small;
+    font-weight: 700;
+    text-transform: uppercase;
     text-decoration: none;
     text-align: center;
-    font-size: min(10vw, 15px) ;
-    color: black;
+    letter-spacing: .15rem;
+    color: #e0e0eb;
+    background-color: #242442;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
 }
-  
+
 a.active {
-    background: black;
-    color: white;
+    /* color: #bddbcc; */
+    color: cornflowerblue;
+    /* text-decoration: underline; */
+    text-underline-offset: 9px;
+    border: 1px solid cornflowerblue;
 }
