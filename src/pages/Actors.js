@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Wrapper } from '../components/Wrapper'
+import NavBar from '../components/NavBar'
 
 const Actors = () => {
   const [actors, setActors] = useState([])
@@ -19,9 +20,12 @@ const Actors = () => {
   const renderActors = actors.map(a => <Wrapper key={a.id} {...a} />)
 
 	return (
-    <main>
-      {renderActors}
-    </main>
+    <>
+      <header><NavBar /></header>
+      <main>
+        {renderActors}
+      </main>
+    </>
 )}
 
 export default Actors

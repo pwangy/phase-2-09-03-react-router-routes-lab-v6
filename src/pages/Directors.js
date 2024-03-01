@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Wrapper } from '../components/Wrapper'
+import NavBar from '../components/NavBar'
 
 function Directors() {
   const [directors, setDirectors] = useState([])
@@ -19,9 +20,12 @@ function Directors() {
   const renderDirectors = directors.map(d => <Wrapper key={d.id} {...d} />)
 
 	return (
-    <main>
-      {renderDirectors}
-    </main>
+    <>
+      <header><NavBar /></header>
+      <main>
+        {renderDirectors}
+      </main>
+    </>
 )}
 
 export default Directors

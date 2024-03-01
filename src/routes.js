@@ -1,35 +1,29 @@
-import { App } from './App'
 import Home from './pages/Home'
 import Directors from './pages/Directors'
 import Actors from './pages/Actors'
 import Movie from './pages/Movie'
-import Error from './pages/Error'
+import ErrorPage from './pages/ErrorPage'
 
 const routes = [
 	{
 		path: '/',
-		element: <App />,
-		errorElement: <Error />,
-		children: [
-			{
-				path: '/',
-				element: <Home />,
-				children: [
-					{
-						path: '/movie/:id',
-						element: <Movie />
-					}
-				]
-			},
-			{
-				path: '/directors',
-				element: <Directors />
-			},
-			{
-				path: '/actors',
-				element: <Actors />
-			}
-		]
+		element: <Home />,
+		errorElement: <ErrorPage />
+	},
+	{
+		path: '/movie/:id',
+		element: <Movie />,
+		errorElement: <ErrorPage />
+	},
+	{
+		path: '/directors',
+		element: <Directors />,
+		errorElement: <ErrorPage />
+	},
+	{
+		path: '/actors',
+		element: <Actors />,
+		errorElement: <ErrorPage />
 	}
 ]
 

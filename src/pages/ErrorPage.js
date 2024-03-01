@@ -1,8 +1,8 @@
 import { useRouteError } from 'react-router-dom'
 
-const Error = () => {
+const ErrorPage = () => {
     const err = useRouteError()
     return <h1 className='err'>{err.message}</h1>
 }
 
-export default Error
+export default ErrorPage

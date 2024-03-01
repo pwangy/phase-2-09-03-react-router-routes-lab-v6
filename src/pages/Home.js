@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import NavBar from '../components/NavBar'
 import MovieCard from '../components/MovieCard'
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
 	
   return (
 		<>
+      <header><NavBar /></header>
       <h1>Home Page</h1>
 			<main>{renderMovies}</main>
 		</>
